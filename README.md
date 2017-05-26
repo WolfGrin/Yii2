@@ -1,3 +1,9 @@
+
+>
+>22 коротких видео, очень хороший докладчик:
+>https://www.youtube.com/playlist?list=PL9XdPIVgBVVmYWGF3BFZwHu4Fz9fa6GJd
+>
+
 Yii 2 Basic Project Template
 ============================
 

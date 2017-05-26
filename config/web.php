@@ -6,10 +6,11 @@ $config = [
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
+    //'layout' => 'basic',
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
-            'cookieValidationKey' => 'id3CeZ6FTIEWyL_x-FbnSl_0F6U5KQMk',
+            'cookieValidationKey' => 'DV_i5jw3J4HpziH33ABEN4Yp43ecsSMV',
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
