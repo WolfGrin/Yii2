@@ -28,10 +28,13 @@ class PostController extends AppController
             debug(Yii::$app->request->post());
             return "test";
         }
+        $this->view->title = "Все статьи";
         return $this->render('test');
     }
     public function actionShow(){
         //$this->layout = 'basic';
+        $this->view->title = "Одна статья";
+        $this->view->registerMetaTag(['name' => 'description', 'content' => 'описание страницы...']);
         return $this->render('show');
     }
 }
