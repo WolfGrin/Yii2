@@ -14,7 +14,11 @@ class PostController extends AppController
     public $layout = 'basic';
 
     public function actionIndex(){
-
+        if( Yii::$app->request->isAjax ) {
+            echo "GET: ";
+            debug($_GET);
+            return "test";
+        }
         return $this->render('test');
     }
     public function actionShow(){
