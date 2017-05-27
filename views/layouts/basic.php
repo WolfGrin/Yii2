@@ -10,7 +10,7 @@ AppAsset::register($this);
 ?>
 
 <!doctype html>
-<html lang="en">
+<html lang="<?= Yii::$app->language ?>">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -30,6 +30,11 @@ AppAsset::register($this);
                 <li role="presentation"><?= Html::a('Статьи', ['post/index']) ?></li>
                 <li role="presentation"><?= Html::a('Статья', ['post/show']) ?></li>
             </ul>
+
+            <?php if( isset($this->blocks['block1']) ): ?>
+                <?= $this->blocks['block1'] ?>
+            <?php endif; ?>
+
             <?= $content ?>
         </div>
     </div>
