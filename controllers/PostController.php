@@ -7,6 +7,7 @@
  */
 
 namespace app\controllers;
+use app\models\TestForm;
 use Yii;
 
 class PostController extends AppController
@@ -28,8 +29,11 @@ class PostController extends AppController
             debug(Yii::$app->request->post());
             return "test";
         }
+
+        $model = new TestForm();
+
         $this->view->title = "Все статьи";
-        return $this->render('test');
+        return $this->render('test', compact('model'));
     }
     public function actionShow(){
         //$this->layout = 'basic';
