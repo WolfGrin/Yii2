@@ -39,7 +39,7 @@ class TestForm extends Model
 
     // своя валидация на сервере
     public function myRule($attr) {
-        if(!in_array($this->attr, ['hello', 'world']) ){
+        if(!in_array($this->$attr, ['hello', 'world']) ){
             $this->addError($attr, 'Wrong!');
         }
     }
