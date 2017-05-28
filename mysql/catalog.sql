@@ -1,16 +1,16 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : OpenServer
-Source Server Version : 50553
+Source Server         : localhost
+Source Server Version : 50550
 Source Host           : localhost:3306
 Source Database       : catalog
 
 Target Server Type    : MYSQL
-Target Server Version : 50553
+Target Server Version : 50550
 File Encoding         : 65001
 
-Date: 2017-05-27 16:03:19
+Date: 2017-05-28 11:19:29
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -56,21 +56,23 @@ CREATE TABLE `products` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `title` varchar(255) NOT NULL,
   `alias` varchar(255) NOT NULL,
+  `parent` int(11) unsigned NOT NULL,
+  `content` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=9510 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of products
 -- ----------------------------
-INSERT INTO `products` VALUES ('7582', 'tLCD iPod Touch', 'lcd-ipod-touch');
-INSERT INTO `products` VALUES ('7583', 'Len+Touchscreen iPod Touch', 'len-touchscreen-ipod-touch');
-INSERT INTO `products` VALUES ('8833', 'Аккумулятор iPod Touch 1G', 'akkumulyator-ipod-touch-lg');
-INSERT INTO `products` VALUES ('8834', 'Аккумулятор iPod Touch 2G', 'akkumulyator-ipod-touch-2g');
-INSERT INTO `products` VALUES ('8935', 'Len+Touchscr^n iPod Touch', 'len-touchscreen-ipod-touch-2g');
-INSERT INTO `products` VALUES ('8989', 'LCD iPod Touch 2G', 'lcd-ipod-touch-2g');
-INSERT INTO `products` VALUES ('9087', 'Buzzer iPod Nano 5G', 'buzzer-ipod-nano-5g');
-INSERT INTO `products` VALUES ('9352', 'LCD iPod Nano 4G', 'lcd-ipod-nano-4g');
-INSERT INTO `products` VALUES ('9353', 'Len iPod Nano 4G', 'len-ipod-nano-4g');
-INSERT INTO `products` VALUES ('9508', 'Аккумулятор iPod Nano 2G', 'akkumulyator-ipod-nano-2g');
-INSERT INTO `products` VALUES ('9509', 'Аккумулятор iPod Nano 3G', 'akkumulyator-ipod-nano-3g');
+INSERT INTO `products` VALUES ('7582', 'tLCD iPod Touch', 'lcd-ipod-touch', '693', 'tlcd');
+INSERT INTO `products` VALUES ('7583', 'Len+Touchscreen iPod Touch', 'len-touchscreen-ipod-touch', '693', null);
+INSERT INTO `products` VALUES ('8833', 'Аккумулятор iPod Touch 1G', 'akkumulyator-ipod-touch-lg', '693', 'touch 1');
+INSERT INTO `products` VALUES ('8834', 'Аккумулятор iPod Touch 2G', 'akkumulyator-ipod-touch-2g', '693', '2g');
+INSERT INTO `products` VALUES ('8935', 'Len+Touchscr^n iPod Touch', 'len-touchscreen-ipod-touch-2g', '693', null);
+INSERT INTO `products` VALUES ('8989', 'LCD iPod Touch 2G', 'lcd-ipod-touch-2g', '693', null);
+INSERT INTO `products` VALUES ('9087', 'Buzzer iPod Nano 5G', 'buzzer-ipod-nano-5g', '693', null);
+INSERT INTO `products` VALUES ('9352', 'LCD iPod Nano 4G', 'lcd-ipod-nano-4g', '693', null);
+INSERT INTO `products` VALUES ('9353', 'Len iPod Nano 4G', 'len-ipod-nano-4g', '693', null);
+INSERT INTO `products` VALUES ('9508', 'Аккумулятор iPod Nano 2G', 'akkumulyator-ipod-nano-2g', '693', null);
+INSERT INTO `products` VALUES ('9509', 'Аккумулятор iPod Nano 3G', 'akkumulyator-ipod-nano-3g', '693', '<p>');
 SET FOREIGN_KEY_CHECKS=1;
