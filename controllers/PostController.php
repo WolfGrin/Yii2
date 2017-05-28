@@ -32,6 +32,17 @@ class PostController extends AppController
             return "test";
         }
 
+
+//        $post = TestForm::findOne(3);
+//        $post->email = '2@2.com';
+//        $post->save();
+
+//        $post = TestForm::findOne(2);
+//        $post->delete();
+
+        TestForm::deleteAll(['>', 'id', 3]);
+//          TestForm::deleteAll();
+
         $model = new TestForm();
 //        $model->name = 'Автор';
 //        $model->email = 'mail@mail.com';
