@@ -12,8 +12,23 @@
 //    echo $cat->title . '<br>';
 //} ?>
 
-<?php debug($cats); ?>
+<?php //debug($cats); ?>
+<?php //echo count($cats->products); ?>
+<?php //echo count($cats[0]->products); ?>
+<?php //debug($cats); ?>
 
+<?php foreach ($cats as $cat):?>
+    <ul>
+        <li><?= $cat->title ?></li>
+        <?php $products = $cat->products; ?>
+        <?php foreach ($products as $product): ?>
+        <ul>
+            <il><?= $product->title ?></il>
+        </ul>
+        <?php endforeach; ?>
+    </ul>
+<?php endforeach; ?>
+    
 <button class="btn btn-success" id="btn">Click me...</button>
 
 <?php  //$this->registerJsFile('@web/js/scripts.js', ['depends' => 'yii\web\YiiAsset']); ?>

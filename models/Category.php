@@ -15,4 +15,8 @@ class Category extends ActiveRecord
     {
         return 'categories';
     }
+
+    public function getProducts() {
+        return $this->hasMany(Product::className(), ['parent' => 'id']);
+    }
 }

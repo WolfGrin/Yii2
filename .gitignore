@@ -28,3 +28,9 @@ phpunit.phar
 
 tests/_output/*
 tests/_support/_generated
+
+*.tmp
+
+# Word temporary
+~$*.doc
+~$*.docx
