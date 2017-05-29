@@ -1,5 +1,6 @@
-<?php //$this->title = 'Одна статья'; ?>
+<?php use app\components\MyWidget; ?>
 
+<?php //$this->title = 'Одна статья'; ?>
 
 <?php $this->beginBlock('block1'); ?>
     <h1>Заголовок страницы</h1>
@@ -7,6 +8,12 @@
 
 
 <h1>Show Action!</h1>
+
+<?php //echo MyWidget::widget(['name' => 'Вася']); ?>
+
+<?php MyWidget::begin(); ?>
+    <h1>привет мир</h1>
+<?php MyWidget::end(); ?>
 
 <?php //foreach ($cats as $cat){
 //    echo $cat->title . '<br>';
@@ -17,17 +24,17 @@
 <?php //echo count($cats[0]->products); ?>
 <?php //debug($cats); ?>
 
-<?php foreach ($cats as $cat):?>
-    <ul>
-        <li><?= $cat->title ?></li>
-        <?php $products = $cat->products; ?>
-        <?php foreach ($products as $product): ?>
-        <ul>
-            <il><?= $product->title ?></il>
-        </ul>
-        <?php endforeach; ?>
-    </ul>
-<?php endforeach; ?>
+<?php //foreach ($cats as $cat):?>
+<!--    <ul>-->
+<!--        <li>--><?//= $cat->title ?><!--</li>-->
+<!--        --><?php //$products = $cat->products; ?>
+<!--        --><?php //foreach ($products as $product): ?>
+<!--        <ul>-->
+<!--            <il>--><?//= $product->title ?><!--</il>-->
+<!--        </ul>-->
+<!--        --><?php //endforeach; ?>
+<!--    </ul>-->
+<?php //endforeach; ?>
     
 <button class="btn btn-success" id="btn">Click me...</button>
 
